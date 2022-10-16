@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_rev_string - Print a string in reverse
+ * print_r - Print a string in reverse
  * @list: List of arguments
  *
  * Return: Length of the string
  **/
-int  print_rev_string(va_list list)
+int  print_r(va_list list)
 {
 	int i, size;
 	const char *str;
