@@ -34,4 +34,8 @@ int print_r(va_list list);
 int print_R(va_list R);
 int _puts(char *str);
 
+/* utils.c */
+int _strlen(const char *);
+int print(char *);
+
 #endif  /* _MAIN_H */
