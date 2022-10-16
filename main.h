@@ -31,5 +31,6 @@ int print_S(va_list S);
 int print_r(va_list r);
 int print_R(va_list R);
 int _puts(char *str);
+int print_rev_string(va_list);
 
 #endif  /* _MAIN_H */
