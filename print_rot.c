@@ -1,47 +1,38 @@
 #include "main.h"
 
 /**
- * rot13 - Encodes a string using rot13.
- * @s: String to enconde
- * Return: String encode
+ * print_R - prints a string in rot13
+ * @R: string to print
+ *
+ * Return: number of chars printed
  */
-int rot13(char *s)
+int print_R(va_list R)
 {
-	int i, j;
-	char *normal, *rot13;
+	char *str;
+	unsigned int i, j;
+	int count = 0;
+	char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char out[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	normal = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	rot13 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	for (i = 0; s[i] != '\0'; i++)
+	str = va_arg(R, char *);
+	if (str == NULL)
+		str = "(ahyy)";
+	for (i = 0; str[i]; i++)
 	{
-		for (j = 0; normal[j] != '\0'; j++)
+		for (j = 0; in[j]; j++)
 		{
-			if (s[i] == normal[j])
+			if (in[j] == str[i])
 			{
-				_putchar(rot13[j]);
+				_putchar(out[j]);
+				count++;
 				break;
 			}
 		}
-
-		if (!normal[j])
-			_putchar(s[i]);
+		if (!in[j])
+		{
+			_putchar(str[i]);
+			count++;
+		}
 	}
-	return (i);
-}
-
-/**
- * print_R - Prints the rot13'ed string
- * @R: String to be encoded
- *
- * Return: Length of the string encoded
- **/
-int print_R(va_list R)
-{
-	char *p;
-	int p_len;
-
-	p = va_arg(R, char *);
-	p_len = rot13((p != NULL) ? p : "(ahyy)");
-
-	return (p_len);
+	return (count);
 }

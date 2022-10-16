@@ -30,7 +30,7 @@ int print_x(va_list x);
 int print_X(va_list X);
 int print_p(va_list p);
 int print_S(va_list S);
-int print_r(va_list list);
+int print_r(va_list r);
 int print_R(va_list R);
 int _puts(char *str);
 

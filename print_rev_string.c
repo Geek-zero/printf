@@ -2,16 +2,16 @@
 
 /**
  * print_r - Print a string in reverse
- * @list: List of arguments
+ * @r: List of arguments
  *
  * Return: Length of the string
  **/
-int  print_r(va_list list)
+int  print_r(va_list r)
 {
 	int i, size;
 	const char *str;
 
-	str = va_arg(list, const char *);
+	str = va_arg(r, const char *);
 
 	size = _strlen(str);
 
