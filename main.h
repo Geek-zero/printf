@@ -37,5 +37,6 @@ int _puts(char *str);
 /* utils.c */
 int _strlen(const char *);
 int print(char *);
+char *itoa(long int, int);
 
 #endif  /* _MAIN_H */
