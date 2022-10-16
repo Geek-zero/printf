@@ -31,7 +31,7 @@ int print_X(va_list X);
 int print_p(va_list p);
 int print_S(va_list S);
 int print_r(va_list r);
-int print_R(va_list );
+int print_R(va_list R);
 int get_precision(const char *format, int *i, va_list list);
 int get_width(const char *format, int *i, va_list list);
 int _puts(char *str);
