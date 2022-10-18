@@ -3,9 +3,14 @@
 /**
  * get_precision - Calculates the precision for printing.
  * @format: Formatted string in which to print the arguments.
+<<<<<<< HEAD
  * @i: List of arguments to be printed.
  * @list: list of arguments.
  * Return: Precision.
+=======
+ * @i: List of arguments to be printed
+ * @list: list of arguments. * * Return: Precision.
+>>>>>>> c5350f5d29ab654ceb7a9175df7eaed5a0e153cc
  */
 int get_precision(const char *format, int *i, va_list list)
 {
